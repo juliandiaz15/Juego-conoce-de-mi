@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#07152F">
+    <meta name="description" content="Un juego interactivo para descubrir cuánto sabes sobre mí.">
+
+    <title>💎 ¿Cuánto sabes de mí?</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FONDO ESPACIAL -->
+    <div class="estrellas-fondo" aria-hidden="true">
+        <span>✦</span>
+        <span>✧</span>
+        <span>✨</span>
+        <span>✦</span>
+        <span>✧</span>
+        <span>⭐</span>
+        <span>✦</span>
+        <span>✨</span>
+        <span>✧</span>
+        <span>✦</span>
+    </div>
+
+    <main class="container">
+
+        <!-- DECORACIONES -->
+        <div class="decoraciones" aria-hidden="true">
+            <span class="diamante d1">💎</span>
+            <span class="diamante d2">💎</span>
+            <span class="estrella e1">✨</span>
+            <span class="estrella e2">⭐</span>
+            <span class="estrella e3">✦</span>
+            <span class="estrella e4">✧</span>
+        </div>
+
+        <!-- PANTALLA DE INICIO -->
+        <section id="inicio" class="pantalla activa">
+
+            <div class="icono">💎</div>
+
+            <p class="etiqueta">✦ UNA EXPERIENCIA GALÁCTICA ✦</p>
+
+            <h1 class="titulo-animado">
+                ¿CUÁNTO SABES DE MÍ?
+            </h1>
+
+            <p class="subtitulo">
+                ✨ Una aventura entre estrellas está por comenzar ✨
+            </p>
+
+            <p class="frase-galaxia">
+                💫 Demuestra que eres de otro universo 💫
+            </p>
+
+            <label for="nombre">🌟 ¿Cómo te llamas?</label>
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Escribe tu nombre..."
+                maxlength="30"
+                autocomplete="off"
+            >
+
+            <button id="btnComenzar">
+                🚀 COMENZAR AVENTURA
+            </button>
+
+            <p class="pie-inicio">
+                💎 10 preguntas · 1 solo desafío · ✨
+            </p>
+
+        </section>
+
+
+        
+        <section id="juego" class="pantalla">
+
+            <div class="encabezado">
+
+                <h2>
+                    ¡Hola, <span id="nombreJugador"></span>! 💙
+                </h2>
+
+                <span id="contador">
+                    Pregunta 1 de 10
+                </span>
+
+            </div>
+
+            <div class="progreso">
+                <div id="barraProgreso"></div>
+            </div>
+
+            <p class="etiqueta">✦ DESCUBRE CUÁNTO ME CONOCES ✦</p>
+
+            <h2 id="pregunta" class="pregunta"></h2>
+
+            <div id="opciones" class="opciones"></div>
+
+            <p id="mensaje" class="mensaje" aria-live="polite"></p>
+
+            <div class="decoracion-inferior">
+                💎 ✨ ⭐ ✨ 💎
+            </div>
+
+        </section>
+
+
+        
+        <section id="resultado" class="pantalla">
+
+            <div class="icono">🏆</div>
+
+            <p class="etiqueta">✦ MISIÓN COMPLETADA ✦</p>
+
+            <h1 class="titulo-animado">
+                ¡LO LOGRASTE!
+            </h1>
+
+            <p id="saludoFinal" class="subtitulo"></p>
+
+            <div class="puntuacion">
+
+                <span id="puntosFinales">0/10</span>
+
+                <p>💎 Respuestas correctas 💎</p>
+
+            </div>
+
+            <p id="mensajeFinal"></p>
+
+            <h3>✨ TU RECORRIDO GALÁCTICO ✨</h3>
+
+            <div id="resumen"></div>
+
+            <button id="btnReiniciar">
+                🔄 VOLVER A JUGAR
+            </button>
+
+            <p class="pie-inicio">
+                Gracias por formar parte de esta aventura 💙
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
